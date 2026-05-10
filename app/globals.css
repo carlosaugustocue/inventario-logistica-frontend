@@ -1,26 +1,39 @@
 @import "tailwindcss";
 
+/* ── Paleta Daluzed ───────────────────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --borgona:    #7A2E2E;   /* Borgoña profundo — autoridad / marca       */
+  --borgona-dk: #5C1F1F;   /* Borgoña oscuro — hover / sombras           */
+  --borgona-lt: #A84040;   /* Borgoña claro — bordes activos             */
+  --rosa:       #F4C8C0;   /* Rosa polvo — tono emocional / acentos      */
+  --rosa-lt:    #FBE8E4;   /* Rosa muy claro — fondos de tarjeta         */
+  --oro:        #C9A84C;   /* Oro dulce — acento premium / celebración   */
+  --oro-lt:     #E8D08A;   /* Oro claro — hover dorado                   */
+  --crema:      #FDF6F0;   /* Crema marfil — fondo principal             */
+  --crema-dk:   #F0E6DC;   /* Crema oscura — separadores / cards         */
+
+  --background: var(--crema);
+  --foreground: #2C1A1A;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-borgona:    var(--borgona);
+  --color-borgona-dk: var(--borgona-dk);
+  --color-borgona-lt: var(--borgona-lt);
+  --color-rosa:       var(--rosa);
+  --color-rosa-lt:    var(--rosa-lt);
+  --color-oro:        var(--oro);
+  --color-oro-lt:     var(--oro-lt);
+  --color-crema:      var(--crema);
+  --color-crema-dk:   var(--crema-dk);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
+  background: var(--crema);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
